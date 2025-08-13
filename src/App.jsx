@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Sidebar from './components/Sidebar'
 import { Route, Routes } from 'react-router-dom'
 import Add from './pages/Add'
@@ -13,7 +13,11 @@ import Login from './components/Login'
 
 const App = () => {
 
-  const [token, setToken] = useState('dummytoken')
+  const [token, setToken] = useState(localStorage.getItem('token') ? localStorage.getItem('token') : "")
+
+  useEffect(()=>{
+    localStorage.setItem('token',token)
+  },[token])
   return (
     <main>
       <ToastContainer />
@@ -24,7 +28,7 @@ const App = () => {
         <div className='mx-auto  max-w-[1440px] flex flex-col sm:flex-row'>
           <Sidebar token={token} setToken={setToken}/>
           <Routes>
-            <Route path='/' element={<Login token={token}/>}/>
+            <Route path='/' element={<Add token={token}/>}/>
              <Route path='/list' element={<List token={token}/>}/>
               <Route path='/orders' element={<Orders token={token}/>}/>
           </Routes>
