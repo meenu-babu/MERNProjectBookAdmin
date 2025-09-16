@@ -27,7 +27,7 @@ const App = () => {
    <div className='bg-blue-900/40 text-gray-900 font-bold'>
         <div className='mx-auto  max-w-[1440px] flex flex-col sm:flex-row'>
           <Sidebar token={token} setToken={setToken}/>
-          <Routes>
+          <Routes className='flex-1'>
             <Route path='/' element={<Add token={token}/>}/>
              <Route path='/list' element={<List token={token}/>}/>
               <Route path='/orders' element={<Orders token={token}/>}/>

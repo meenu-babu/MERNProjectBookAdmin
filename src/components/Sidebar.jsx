@@ -4,14 +4,15 @@ import { FaListAlt } from 'react-icons/fa'
 import { FaSquarePlus } from 'react-icons/fa6'
 import { MdFactCheck } from 'react-icons/md'
 import { NavLink, Link } from 'react-router-dom'
-import logo from "../assets/logo.png"
+import logo from '../assets/logo.png'
 
 
 
-const Sidebar = () => {
+
+const Sidebar = ({setToken}) => {
   return (
 
-    <div className='w-full sm:w-1/5 min-h-screen bg-white rounded pb-3 flex flex-col items-center'>
+    <div className='w-full sm:w-1/5 sm:min-h-screen bg-white rounded pb-3 flex flex-col items-center'>
       <Link to='/' className='text-2xl font-bold flex items-center sm:pl-6 pt-6'>
         <img src={logo} alt='Logo' width={64} height={64} />
         <span className='pl-2 hidden lg:flex'>Bookkart</span>
@@ -55,10 +56,10 @@ const Sidebar = () => {
 
 
         {/* logout button */}
-        <div className='w-full '>
-          <button className='w-full  flex items-center gap-2 px-4 py-2 text-[14px] font-[500] cursor-pointer h-10 rounded-xl bg-amber-700/20 hover:bg-amber-700/80'>
-            <BiLogOut  />
-            <div className='hidden lg:flex'>Logout</div>
+        <div className='max-sm:ml-5 sm:mt-72'>
+          <button className='flex items-center justify-start gap-x-2 sm:pl-2 p-5 text-[16px] font-[400] cursor-pointer h-10  rounded-xl bg-amber-900/80'>
+            <BiLogOut onClick={()=>setToken('')} className='text-lg' />
+            <div className='hidden lg:flex '>Logout</div>
           </button>
         </div>
       </div>

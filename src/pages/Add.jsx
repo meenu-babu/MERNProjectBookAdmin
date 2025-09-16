@@ -93,7 +93,7 @@ const Add = ({token}) => {
           <input onChange={(e) => setPopular((prev) => !prev)} type="checkbox" checked={popular} id='popular' />
           <label htmlFor='popular' className='cursor-pointer'>Add to popular</label>
         </div>
-        <button type='submit' className=' medium-14 bg-tertiary text-white ring-1 ring-tertiary px-7 py-2.5 rounded-full mt-3 max-w-44 sm:w-full'>Add product</button>
+        <button type='submit' className=' medium-14 bg-pink-900/80 text-white ring-1 ring-tertiary px-7 py-2.5 rounded-full mt-3 max-w-44 sm:w-full'>Add product</button>
       </form>
     </div>
   )
