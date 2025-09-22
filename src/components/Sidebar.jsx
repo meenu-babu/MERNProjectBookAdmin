@@ -57,8 +57,8 @@ const Sidebar = ({setToken}) => {
 
         {/* logout button */}
         <div className='max-sm:ml-5 sm:mt-72'>
-          <button className='flex items-center justify-start gap-x-2 sm:pl-2 p-5 text-[16px] font-[400] cursor-pointer h-10  rounded-xl bg-amber-900/80'>
-            <BiLogOut onClick={()=>setToken('')} className='text-lg' />
+          <button onClick={()=>setToken('')}  className='flex items-center justify-start gap-x-2 sm:pl-2 p-5 text-[16px] font-[400] cursor-pointer h-10  rounded-xl bg-amber-900/80'>
+            <BiLogOut className='text-lg' />
             <div className='hidden lg:flex '>Logout</div>
           </button>
         </div>

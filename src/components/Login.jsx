@@ -28,7 +28,7 @@ const onSubmitHandler=async(e)=>{
 }
 
   return (
-    <section className='absolute top-0 left-0 h-full w-full z-50 bg-blue-800/40'>
+    <section className='absolute top-0 left-0 h-full w-full z-50 bg-blue-100/30'>
       {/* container */}
       <div className='flex h-full w-full'>
         {/* image right side */}
@@ -50,7 +50,7 @@ const onSubmitHandler=async(e)=>{
               <input onChange={(e)=>setPassword(e.target.value)} value={password} type='password' placeholder='Password' className='w-full px-3 py-1 ring-1 ring-slate-900/10 rounded bg-primary mt-1'/>
 
             </div>
-            <button type='submit' className='btn-dark w-full mt-5 !py-[7px] !rounded'>Login</button>
+            <button type='submit' className='btn-dark w-full mt-5 !py-[7px] bg-blue-900/80 !rounded'>Login</button>
 
           </form>
         </div>
